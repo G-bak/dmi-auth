@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>회원가입</title>
+
+  <link rel="icon" type="image/x-icon" href="/img/favicon.ico" />
+  <script src="/elixir/vendors/overlayscrollbars/OverlayScrollbars.min.js"></script>
+
+  <link href="/elixir/vendors/hamburgers/hamburgers.min.css" rel="stylesheet">
+  <link href="/elixir/vendors/loaders.css/loaders.min.css" rel="stylesheet">
+  <link href="/elixir/assets/css/theme.css" rel="stylesheet" />
+  <link href="/elixir/assets/css/user.css" rel="stylesheet" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&amp;family=Noto+Sans+KR:wght@100..900&amp;family=Open+Sans:wght@300;400;600;700;800&amp;display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <main class="main" id="top">
+    <div class="preloader" id="preloader">
+      <div class="loader">
+        <div class="line-scale">
+          <div></div><div></div><div></div><div></div><div></div>
+        </div>
+      </div>
+    </div>
+
+    <section class="text-center py-0">
+      <div class="bg-holder overlay overlay-1" style="background-image:url(/elixir/assets/img/background-1.jpg);">
+      </div>
+
+      <div class="container">
+        <div class="row min-vh-100 align-items-center">
+          <div class="col-md-9 col-lg-6 mx-auto" data-zanim-timeline="{}" data-zanim-trigger="scroll">
+            <div class="mb-5 d-none" data-zanim-xs='{"delay":0,"duration":1}'>
+              <a href="#"><img src="/elixir/assets/img/logo-light.png" alt="logo" /></a>
+            </div>
+
+            <div class="card" data-zanim-xs='{"delay":0.1,"duration":1}'>
+              <div class="card-body p-md-5">
+                <h4 class="text-uppercase fs-0 fs-md-1">Create your account</h4>
+                <form id="registerForm" class="text-start mt-4">
+                  <div class="row align-items-center g-4">
+                    <div class="col-12">
+                      <!-- ✅ 서버 스키마에 맞게 username 으로 변경 -->
+                      <input class="form-control" name="username" type="text" placeholder="Username" aria-label="Username" required />
+                    </div>
+                    <div class="col-12">
+                      <input class="form-control" name="email" type="email" placeholder="Email Address" aria-label="Email Address" required />
+                    </div>
+                    <div class="col-12">
+                      <input class="form-control" name="password" type="password" placeholder="Password" aria-label="Password" minlength="8" required />
+                    </div>
+                    <div class="col-12">
+                      <input class="form-control" name="confirm" type="password" placeholder="Confirm Password" aria-label="Confirm Password" minlength="8" required />
+                    </div>
+                  </div>
+                  <div id="row" class="row align-items-center justify-content-end mt-3">
+                    <div class="col-6 mt-3">
+                      <div class="form-check">
+                        <input class="form-check-input" id="termsCheck" type="checkbox" required />
+                        <label class="form-check-label text-500 lh-sm fw-semi-bold" for="termsCheck">
+                          I agree with the terms &amp; conditions
+                        </label>
+                      </div>
+                    </div>
+                    <div class="col-6 mt-2 mt-sm-3">
+                      <button class="btn btn-primary w-100" type="submit">Create Account</button>
+                    </div>
+                  </div>
+                </form>
+
+                <!-- ✅ 로그인 페이지 이동 섹션 -->
+                <hr class="my-4" />
+                <div class="text-center">
+                  <span class="text-500 me-1">이미 계정이 있으신가요?</span>
+                  <a href="/index.html" class="fw-semibold text-primary text-decoration-none">
+                    로그인 <i class="fas fa-arrow-right ms-1"></i>
+                  </a>
+                </div>
+                <!-- ✅ end -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Scripts -->
+  <script src="/elixir/vendors/popper/popper.min.js"></script>
+  <script src="/elixir/vendors/bootstrap/bootstrap.min.js"></script>
+  <script src="/elixir/vendors/is/is.min.js"></script>
+  <script src="/elixir/vendors/fontawesome/all.min.js"></script>
+  <script src="/elixir/vendors/lodash/lodash.min.js"></script>
+  <script src="/elixir/vendors/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="/elixir/vendors/gsap/gsap.js"></script>
+  <script src="/elixir/vendors/gsap/customEase.js"></script>
+  <script src="/elixir/assets/js/theme.js"></script>
+
+  <!-- ✅ 회원가입 처리 스크립트 -->
+  <script type="module" src="/js/register.js"></script>
+</body>
+
+</html>
